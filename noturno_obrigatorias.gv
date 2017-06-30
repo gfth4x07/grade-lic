@@ -1,0 +1,80 @@
+digraph G {
+   // ranksep=1.75; size = "7.5,7.5";
+    {
+    node [shape=plaintext, fontsize=16];
+    /* the time-line graph */
+    "1º Semestre" -> "2º Semestre" -> "3º Semestre" -> "4º Semestre" ->
+    "5º Semestre" -> "6º Semestre" -> "7º Semestre" -> "8º Semestre" ->
+    "9º Semestre"->  "10º Semestre"[dir =none];
+    }
+
+    //Periodo "Ideal"
+    // 1 Semestre
+    rank =same{"1º Semestre";
+    "Ótica";
+    "Geometria Analítica";
+    "Cálculo 1";
+    "Lab";}
+    // 2 Semestre
+    rank =same{"2º Semestre";
+    "Gravitação";
+    "Álgebra Linear";
+    "Cálculo 2";
+    "MEB";}
+    // 3 Semestre
+    rank =same{"3º Semestre";
+    "Medidas";
+    "Estatística 1";
+    "Álgebra 1";
+    "Cálculo 3";}
+    // 4 Semestre
+    rank =same{"4º Semestre";
+    "Computação";
+    "Estatística 2";
+    "Análise";
+    "Cálculo 4";}
+    // 5 Semestre
+    rank =same{"5º Semestre";
+    "Física do Calor";
+    "Cálculo Numérico";
+    "Álgebra 2";}
+    // 6 Semestre
+    rank =same{"6º Semestre";
+    "Mecânica";
+    "Didática";
+    "Desenho Geométrico 1";}
+    // 7 Semestre
+    rank =same{"7º Semestre";
+    "Desenho Geométrico 2";
+    "MAT1500";}
+    // 8 Semestre
+    rank =same{"8º Semestre";
+    "Eletromag";
+    "POEBB";
+    "História da Matemática 1";}
+    // 9 Semestre
+    rank =same{"9º Semestre";
+    "Metodologia 1";
+    "Geometria 3";}
+    // 10 Semestre
+    rank =same{"10º Semestre";
+    "Metodologia 2";
+    "Conjuntos";}
+
+    // Requisitos
+    "Estatística 1" -> "Estatística 2";
+    "Geometria Analítica" -> "Álgebra Linear","Desenho Geométrico 1";
+    "Cálculo 1" -> "Cálculo 2";
+    "Lab" -> "Cálculo 2","Análise";
+    "Cálculo 2" -> "Cálculo 3","Análise","Física do Calor","Cálculo Numérico";
+    "Medidas" -> "Eletromag";
+    "Computação" -> "Cálculo Numérico";
+    "Álgebra 1" -> "Álgebra 2","MAT1500","História da Matemática 1","Metodologia 1","Conjuntos";
+    "Cálculo 3" -> "Cálculo 4", "Mecânica";
+    "Didática" -> "MAT1500","Metodologia 1";
+    "Desenho Geométrico 1" -> "Desenho Geométrico 2","MAT1500",
+        "História da Matemática 1","Metodologia 1","Geometria 3","Conjuntos";
+    "Análise" -> "MAT1500","História da Matemática 1","Metodologia 1";
+    "Metodologia 1" -> "Metodologia 2";
+    "Cálculo 4" -> "Conjuntos";
+}
